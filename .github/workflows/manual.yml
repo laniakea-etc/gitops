@@ -30,8 +30,8 @@ jobs:
     - name: Create PR
       run: gh repo clone https://github.com/laniakea-etc/gitops.git
       env: 
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         GITHUB_TOKEN: ${{ secrets.GIT_PAT }}
     - name: Create PR 2
       run: gh pr create -B release -H release-staging --title TestGH-PR --body "I hope this works"
       env: 
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         GITHUB_TOKEN: ${{ secrets.GIT_PAT }}
