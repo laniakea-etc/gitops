@@ -32,10 +32,7 @@ jobs:
       env: 
         GITHUB_TOKEN: ${{ secrets.GIT_PAT }}
     
-    - name: Change Directory
-      run: cd gitops
-    
     - name: Create PR 2
-      run: gh pr create -B release -H release-staging --title TestGH-PR --body "I hope this works"
+      run: cd gitops; gh pr create -B release -H release-staging --title TestGH-PR --body "I hope this works"
       env: 
         GITHUB_TOKEN: ${{ secrets.GIT_PAT }}
